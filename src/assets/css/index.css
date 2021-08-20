@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply min-h-full;
+  @apply h-full;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif;
+}
+
+input:disabled,
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+input[type='text']:disabled,
+textarea:disabled {
+  @apply disabled:opacity-50 disabled:bg-gray-200;
+}
+
+.h1 {
+  @apply text-4xl;
+}
+
+.h2 {
+  @apply text-3xl;
+}
+
+.h3 {
+  @apply text-2xl;
+}
+
+.link {
+  @apply duration-300 transition hover:text-secondary-500;
+}
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.3s;
+}
+.list-enter,
+.list-leave-to {
+  opacity: 0;
+  transform: translate3d(0, 50%, 0);
+}
+
+.slideUp-enter-active,
+.slideUp-leave-active {
+  transition: all 0.3s;
+}
+.slideUp-enter,
+.slideUp-leave-to {
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}
+
+.slideDown-enter-active,
+.slideDown-leave-active {
+  transition: all 0.3s;
+}
+.slideDown-enter,
+.slideDown-leave-to {
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+}
+
+.slideLeft-enter-active {
+  transition: all 0.3s ease;
+}
+.slideLeft-leave-active {
+  transition: all 0.3s ease;
+}
+.slideLeft-enter, .slideLeft-leave-to {
+  transform: translateX(100%);
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0
+}

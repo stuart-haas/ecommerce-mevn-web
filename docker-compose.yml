@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  client:
+    container_name: ecommerce_client
+    build:
+      dockerfile: docker/Dockerfile
+      context: .
+    volumes:
+      - ./:/app/client
+      - /app/client/node_modules
+    ports:
+      - 3000:3000
+    networks: 
+      - frontend
+
+networks:
+  frontend:
